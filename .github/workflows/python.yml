@@ -16,7 +16,6 @@ env:
 jobs:
   Python-app-test:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     steps:
     - name: Show name
       run:  echo "${{ github.actor }} - $GROUP "
