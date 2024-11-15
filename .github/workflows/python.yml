@@ -1,10 +1,25 @@
 name: Python test
 run-name: ${{ github.actor }} running test
-on: [push]
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - mater
+      - release
+      - develop
+
+env:
+  GROUP: 001
+
 jobs:
   Python-app-test:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     steps:
+    - name: Show name
+    - run:  echo "${{ github.actor }} - $GROUP "
     - uses: actions/checkout@v4
     - name: Set up Python
       uses: actions/setup-python@v5
