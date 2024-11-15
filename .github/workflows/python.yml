@@ -20,7 +20,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
     - name: Show name
-    - run:  echo "${{ github.actor }} - $GROUP "
+      run:  echo "${{ github.actor }} - $GROUP "
     - uses: actions/checkout@v4
     - name: Set up Python
       uses: actions/setup-python@v5
