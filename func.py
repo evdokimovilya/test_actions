@@ -7,3 +7,5 @@ def divide(a, b):
         raise ValueError('на ноль делить нельзя')
     return a/b
 
+
+# test
